@@ -32,10 +32,10 @@ class Shop:
             price = quantity * self.products[product]
             total_cost += price
 
-            price = int(price) if price.is_integer() else round(price, 1)
+            price = int(price) if float(price).is_integer() else round(price, 1)
             products_to_buy[product] = (quantity, round(price, 1))
 
-        if total_cost.is_integer():
+        if float(total_cost).is_integer():
             total_cost = int(total_cost)
         else:
             round(total_cost, 1)

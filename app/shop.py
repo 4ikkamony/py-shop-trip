@@ -34,14 +34,11 @@ class Shop:
 
             if float(price).is_integer():
                 price = int(price)
-            else:
-                round(price, 1)
+
             products_to_buy[product] = (quantity, round(price, 1))
 
         if float(total_cost).is_integer():
             total_cost = int(total_cost)
-        else:
-            round(total_cost, 1)
 
         print(
             Shop._write_receipt(

@@ -30,6 +30,9 @@ class DataLoader:
 
         fuel_price = self._data["FUEL_PRICE"]
 
+        if not isinstance(fuel_price, (int, float)):
+            raise ValueError("'customers' must be a list")
+
         if fuel_price < 0:
             raise ValueError("FUEL_PRICE must be a number >= 0")
 
